@@ -1,1 +1,65 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>let decode it</title>
+    <style type="text/css" media="all">
+     *{
+         margin: 0;
+     }
+     body{
+         height: 99vh;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+      button{
+          outline: none;
+          border:none;
+          border-radius: 10px;
+          background : #143AEB;
+          width: 50%;
+          height: 45px;
+          font-size: 20px;
+          color: #FFFFFF ;
+      } 
+      button:focus{
+          background: #9BADFF;
+          color:#030719;
+      }
+      input {
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #000000;
+          font-size: 20px;
+          height: 30px;
+          width: 100;
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      label{
+          font-size: 30px;
+          color:#D64C4C;
+          font-weight: bold;
+          margin-bottom: 10px;
+      }
+    </style>
+</head>
+<body>
+ 
+<label for="">enter the text</label>
+<input type="text" name="" id="text" value="" placeholder="enter the encode value"/>
+<button id="decode">let's Decode</button>
+<div id="output"></div>
+</body>
+</html>
+<script type="text/javascript" charset="utf-8">
+   var text;
+   var button = document.getElementById("decode");
+  button.addEventListener('click',function(){
+      text = document.getElementById("text").value;
+    document.getElementById("output").innerText = window.btoa(text);
+  })
+</script>
