@@ -60,6 +60,6 @@
    var button = document.getElementById("decode");
   button.addEventListener('click',function(){
       text = document.getElementById("text").value;
-    document.getElementById("output").innerText = window.btoa(text);
+    document.getElementById("output").innerText = window.atob(text);
   })
 </script>
